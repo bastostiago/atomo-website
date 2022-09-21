@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Átomo - Especialista em Dados</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="lib/main.js"></script>
   </head>
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="./index.html">
                 <img src="img/Atomo-Horizontal.jpg" width="200%">
@@ -43,35 +47,39 @@
     </nav>
     
     <section class="section is-medium" >
-        <div class="container">
-            <h1 class="title">
-                Somos a Átomo
-            </h1>
-            <p class="subtitle">
-                Consultoria Especializada em <strong>Dados</strong>!
-            </p>
-            <div class="buttons">
-                <button class="button is-info is-rounded" onclick="location.href='https://wa.me/55047988135445';">
-                    <span class="icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </span>
-                    <span>Fale com um Especialista</span>
-                </button>         
+        <div class="columns">
+            <div class="column is-half">
+                <h1 class="title">
+                    Somos a Átomo
+                </h1>
+                <p class="subtitle">
+                    Especialista em transformar <strong>Dados</strong> em informações que guiam sua <strong>Organização</strong>. A Ciência de Dados é capaz potencializar seus resultados, diminuir seus custos e criar vantagem competitiva. 
+                </p>
+                <div class="buttons">
+                    <button class="button is-info is-rounded" onclick="location.href='https://wa.me/55047988135445';">
+                        <span class="icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </span>
+                        <span>Fale com um Especialista</span>
+                    </button>         
+                </div>
             </div>
-            
-        </div>
+            <div class="column">
+                <figure class="image is-fullwidth">
+                    <img src="img/main-image.png" id="mainImage">
+                </figure>
+            </div>
+          </div>
     </section>
 
     <footer class="footer">
         <div class="content has-text-centered">
-        <p>
-            Copyright <strong>Átomo</strong> - Todos os direitos reservados.
-        </p>
+            <p>
+                Copyright <strong>Átomo</strong> - Todos os direitos reservados.
+            </p>
         </div>
     </footer>
 
   </body>
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="lib/main.js"></script>
+  
 </html>
