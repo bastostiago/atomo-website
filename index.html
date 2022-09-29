@@ -4,18 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Átomo - Especialista em Dados</title>
+    <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="lib/main.js"></script>
+    <script src="static/js/main.js"></script>
   </head>
   <body>
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top is-white" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="./index.html">
-                <img src="img/Atomo-Horizontal.jpg" width="200%">
+            <a class="navbar-item" href="#welcome">
+                <img src="static/img/Atomo-Horizontal.jpg" width="200%">
             </a>
         
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
@@ -27,30 +28,30 @@
         
         <div id="navbarBasic" class="navbar-menu">
             <div class="navbar-end">
-                <a class="navbar-item" href="./index.html">
+                <a class="navbar-item is-active" href="#welcome">
                     Home
                 </a>
             
-                <a class="navbar-item" href="./quem_somos.html">
+                <a class="navbar-item" href="#whoweare">
                     Quem Somos
                 </a>
 
-                <a class="navbar-item" href="./solucoes.html">
+                <a class="navbar-item" href="#solutions">
                     Soluções
                 </a>
 
-                <a class="navbar-item" href="./contato.html">
+                <a class="navbar-item" href="#contact">
                     Contato
                 </a>
             </div>
         </div>
     </nav>
     
-    <section class="section is-medium" >
+    <section class="section is-medium" id="welcome">
         <div class="columns">
             <div class="column is-half">
                 <h1 class="title">
-                    Somos a Átomo
+                    Bem vindo a Átomo
                 </h1>
                 <p class="subtitle">
                     Especialista em transformar <strong>Dados</strong> em informações que guiam sua <strong>Organização</strong>. A Ciência de Dados é capaz de potencializar seus resultados, diminuir seus custos e criar vantagem competitiva. 
@@ -66,10 +67,67 @@
             </div>
             <div class="column">
                 <figure class="image is-fullwidth">
-                    <img src="img/main-image.png" id="mainImage">
+                    <img style="display: none;" src="static/img/main-image.png" id="mainImage">
                 </figure>
             </div>
           </div>
+    </section>
+
+    <section class="section" id="whoweare">
+        <div class="columns is-full has-text-centered">
+            <div class="column">
+                <h1 class="title has-background-info-dark has-text-white p-3">
+                    Quem Somos?
+                </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dictum tortor, eu gravida velit. Nulla facilisi. Aliquam quis viverra nisl. Fusce gravida nec dolor non iaculis. Nunc at lobortis tortor. Donec auctor velit risus, vitae commodo ex vestibulum a. Fusce sed dui vitae libero ornare convallis eu quis leo. Integer consectetur magna dolor, eget egestas ex condimentum ac. Quisque consectetur imperdiet odio, non consectetur est lobortis vitae. Curabitur vel malesuada ex.
+
+                    Pellentesque id consequat diam. Suspendisse enim orci, pharetra blandit nulla ac, ullamcorper pharetra enim. Sed dignissim ex eget lectus porttitor mollis. Mauris aliquet mattis mollis. Sed maximus massa felis, ut pellentesque metus facilisis non. Quisque massa ipsum, tempor et dolor eget, mattis congue purus. Proin vel nunc ut lectus sagittis gravida.
+                    
+                    Aenean sollicitudin a sem quis molestie. Phasellus tempor tellus vitae ornare cursus. Aliquam sit amet nisl ipsum. Suspendisse et ex sit amet nisi posuere consequat. Vivamus sed lectus vitae nisi sollicitudin euismod vel ut eros. Suspendisse pulvinar ullamcorper lacus vel convallis. In hac habitasse platea dictumst.
+                    
+                    Nullam maximus nec lorem a dignissim. Sed eget ex luctus tellus rutrum finibus. Aliquam sed tortor sed purus ultricies commodo sed et massa. Aliquam tempus neque sed orci bibendum ultricies. Fusce imperdiet neque ac convallis aliquam. Donec commodo euismod turpis, non euismod velit porta et. Ut fringilla metus leo, non cursus arcu pharetra pellentesque. Nullam pretium, dolor a pharetra mollis, ligula odio finibus sem, quis scelerisque orci ligula sed ipsum. Proin congue justo eu lectus accumsan, eget feugiat dui iaculis. Nullam id lectus interdum, efficitur metus at, efficitur ex.
+                    
+                    Integer turpis risus, tincidunt egestas ultricies ullamcorper, dictum ac lorem. Donec at enim odio. Quisque bibendum vestibulum risus eu pharetra. Donec et commodo nulla, in tempus metus. Vivamus dolor dui, rutrum et sapien nec, facilisis consequat sapien. Fusce luctus orci non sapien cursus volutpat. Aenean faucibus nulla commodo eros maximus, efficitur dignissim diam faucibus. Sed et felis sit amet eros sagittis dignissim. Praesent tristique augue vel velit posuere, vitae eleifend purus efficitur. Donec lorem sapien, vehicula ut mauris a, accumsan iaculis quam.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="solutions">
+        <div class="columns is-full has-text-centered">
+            <div class="column">
+                <h1 class="title has-background-info-dark has-text-white p-3">
+                    Soluções
+                </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dictum tortor, eu gravida velit. Nulla facilisi. Aliquam quis viverra nisl. Fusce gravida nec dolor non iaculis. Nunc at lobortis tortor. Donec auctor velit risus, vitae commodo ex vestibulum a. Fusce sed dui vitae libero ornare convallis eu quis leo. Integer consectetur magna dolor, eget egestas ex condimentum ac. Quisque consectetur imperdiet odio, non consectetur est lobortis vitae. Curabitur vel malesuada ex.
+
+                    Pellentesque id consequat diam. Suspendisse enim orci, pharetra blandit nulla ac, ullamcorper pharetra enim. Sed dignissim ex eget lectus porttitor mollis. Mauris aliquet mattis mollis. Sed maximus massa felis, ut pellentesque metus facilisis non. Quisque massa ipsum, tempor et dolor eget, mattis congue purus. Proin vel nunc ut lectus sagittis gravida.
+                    
+                    Aenean sollicitudin a sem quis molestie. Phasellus tempor tellus vitae ornare cursus. Aliquam sit amet nisl ipsum. Suspendisse et ex sit amet nisi posuere consequat. Vivamus sed lectus vitae nisi sollicitudin euismod vel ut eros. Suspendisse pulvinar ullamcorper lacus vel convallis. In hac habitasse platea dictumst.
+                    
+                    Nullam maximus nec lorem a dignissim. Sed eget ex luctus tellus rutrum finibus. Aliquam sed tortor sed purus ultricies commodo sed et massa. Aliquam tempus neque sed orci bibendum ultricies. Fusce imperdiet neque ac convallis aliquam. Donec commodo euismod turpis, non euismod velit porta et. Ut fringilla metus leo, non cursus arcu pharetra pellentesque. Nullam pretium, dolor a pharetra mollis, ligula odio finibus sem, quis scelerisque orci ligula sed ipsum. Proin congue justo eu lectus accumsan, eget feugiat dui iaculis. Nullam id lectus interdum, efficitur metus at, efficitur ex.
+                    
+                    Integer turpis risus, tincidunt egestas ultricies ullamcorper, dictum ac lorem. Donec at enim odio. Quisque bibendum vestibulum risus eu pharetra. Donec et commodo nulla, in tempus metus. Vivamus dolor dui, rutrum et sapien nec, facilisis consequat sapien. Fusce luctus orci non sapien cursus volutpat. Aenean faucibus nulla commodo eros maximus, efficitur dignissim diam faucibus. Sed et felis sit amet eros sagittis dignissim. Praesent tristique augue vel velit posuere, vitae eleifend purus efficitur. Donec lorem sapien, vehicula ut mauris a, accumsan iaculis quam.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="columns is-full has-text-centered">
+            <div class="column">
+                <h1 class="title has-background-info-dark has-text-white p-3">
+                    Contato
+                </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dictum tortor, eu gravida velit. Nulla facilisi. Aliquam quis viverra nisl. Fusce gravida nec dolor non iaculis. Nunc at lobortis tortor. Donec auctor velit risus, vitae commodo ex vestibulum a. Fusce sed dui vitae libero ornare convallis eu quis leo. Integer consectetur magna dolor, eget egestas ex condimentum ac. Quisque consectetur imperdiet odio, non consectetur est lobortis vitae. Curabitur vel malesuada ex.
+
+                    Pellentesque id consequat diam. Suspendisse enim orci, pharetra blandit nulla ac, ullamcorper pharetra enim. Sed dignissim ex eget lectus porttitor mollis. Mauris aliquet mattis mollis. Sed maximus massa felis, ut pellentesque metus facilisis non. Quisque massa ipsum, tempor et dolor eget, mattis congue purus. Proin vel nunc ut lectus sagittis gravida.
+                    
+                    Aenean sollicitudin a sem quis molestie. Phasellus tempor tellus vitae ornare cursus. Aliquam sit amet nisl ipsum. Suspendisse et ex sit amet nisi posuere consequat. Vivamus sed lectus vitae nisi sollicitudin euismod vel ut eros. Suspendisse pulvinar ullamcorper lacus vel convallis. In hac habitasse platea dictumst.
+                    
+                    Nullam maximus nec lorem a dignissim. Sed eget ex luctus tellus rutrum finibus. Aliquam sed tortor sed purus ultricies commodo sed et massa. Aliquam tempus neque sed orci bibendum ultricies. Fusce imperdiet neque ac convallis aliquam. Donec commodo euismod turpis, non euismod velit porta et. Ut fringilla metus leo, non cursus arcu pharetra pellentesque. Nullam pretium, dolor a pharetra mollis, ligula odio finibus sem, quis scelerisque orci ligula sed ipsum. Proin congue justo eu lectus accumsan, eget feugiat dui iaculis. Nullam id lectus interdum, efficitur metus at, efficitur ex.
+                    
+                    Integer turpis risus, tincidunt egestas ultricies ullamcorper, dictum ac lorem. Donec at enim odio. Quisque bibendum vestibulum risus eu pharetra. Donec et commodo nulla, in tempus metus. Vivamus dolor dui, rutrum et sapien nec, facilisis consequat sapien. Fusce luctus orci non sapien cursus volutpat. Aenean faucibus nulla commodo eros maximus, efficitur dignissim diam faucibus. Sed et felis sit amet eros sagittis dignissim. Praesent tristique augue vel velit posuere, vitae eleifend purus efficitur. Donec lorem sapien, vehicula ut mauris a, accumsan iaculis quam.</p>
+            </div>
+        </div>
     </section>
 
     <footer class="footer">
