@@ -29,7 +29,7 @@ $(document).ready(function() {
             a.classList.remove("is-active");
             // console.log(current);
             // console.log('ClassList: ' + a.classList);
-            if (a.href.includes(current)) {
+            if (a.href.includes(current) && a.id != 'logo') {
                 a.classList.add("is-active");
             }
         });
