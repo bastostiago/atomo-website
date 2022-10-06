@@ -11,6 +11,36 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="static/js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('E0XiyjL4FZETdLjk0');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_j3u9sjf', 'template_8k5qsod', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <script>
+        const onloadCallback = function() {
+          console.log("reCAPTCHA has loaded!");
+          grecaptcha.reset();
+        };
+    </script>
+    <script async src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>
   </head>
   <body>
     <nav class="navbar is-fixed-top is-white" role="navigation" aria-label="main navigation">
@@ -111,21 +141,30 @@
         </div>
     </section>
 
-    <section class="section" id="contact">
-        <div class="columns is-full has-text-centered">
-            <div class="column">
+    <section class="section" id="contact">        
+        <div class="columns has-text-centered">
+            <div class="column is-full">
                 <h1 class="title has-background-info-dark has-text-white p-3">
                     Contato
                 </h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dictum tortor, eu gravida velit. Nulla facilisi. Aliquam quis viverra nisl. Fusce gravida nec dolor non iaculis. Nunc at lobortis tortor. Donec auctor velit risus, vitae commodo ex vestibulum a. Fusce sed dui vitae libero ornare convallis eu quis leo. Integer consectetur magna dolor, eget egestas ex condimentum ac. Quisque consectetur imperdiet odio, non consectetur est lobortis vitae. Curabitur vel malesuada ex.
-
-                    Pellentesque id consequat diam. Suspendisse enim orci, pharetra blandit nulla ac, ullamcorper pharetra enim. Sed dignissim ex eget lectus porttitor mollis. Mauris aliquet mattis mollis. Sed maximus massa felis, ut pellentesque metus facilisis non. Quisque massa ipsum, tempor et dolor eget, mattis congue purus. Proin vel nunc ut lectus sagittis gravida.
-                    
-                    Aenean sollicitudin a sem quis molestie. Phasellus tempor tellus vitae ornare cursus. Aliquam sit amet nisl ipsum. Suspendisse et ex sit amet nisi posuere consequat. Vivamus sed lectus vitae nisi sollicitudin euismod vel ut eros. Suspendisse pulvinar ullamcorper lacus vel convallis. In hac habitasse platea dictumst.
-                    
-                    Nullam maximus nec lorem a dignissim. Sed eget ex luctus tellus rutrum finibus. Aliquam sed tortor sed purus ultricies commodo sed et massa. Aliquam tempus neque sed orci bibendum ultricies. Fusce imperdiet neque ac convallis aliquam. Donec commodo euismod turpis, non euismod velit porta et. Ut fringilla metus leo, non cursus arcu pharetra pellentesque. Nullam pretium, dolor a pharetra mollis, ligula odio finibus sem, quis scelerisque orci ligula sed ipsum. Proin congue justo eu lectus accumsan, eget feugiat dui iaculis. Nullam id lectus interdum, efficitur metus at, efficitur ex.
-                    
-                    Integer turpis risus, tincidunt egestas ultricies ullamcorper, dictum ac lorem. Donec at enim odio. Quisque bibendum vestibulum risus eu pharetra. Donec et commodo nulla, in tempus metus. Vivamus dolor dui, rutrum et sapien nec, facilisis consequat sapien. Fusce luctus orci non sapien cursus volutpat. Aenean faucibus nulla commodo eros maximus, efficitur dignissim diam faucibus. Sed et felis sit amet eros sagittis dignissim. Praesent tristique augue vel velit posuere, vitae eleifend purus efficitur. Donec lorem sapien, vehicula ut mauris a, accumsan iaculis quam.</p>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-three-fifths">                
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number">
+                    <label>Name</label>
+                    <input type="text" name="from_name">
+                    <label>Email</label>
+                    <input type="email" name="reply_to">
+                    <label>Message</label>
+                    <textarea name="message"></textarea>
+                    <div class="g-recaptcha" data-sitekey="6LeCAl8iAAAAACXvZmXuyQ7md47Ang7jWRxjhSev"></div>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            <div class="column">
+                <div id="map"></div>
             </div>
         </div>
     </section>
@@ -137,6 +176,8 @@
             </p>
         </div>
     </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0O91ohhJN71w3B1Zz8eBya3fEbzJmCAA&callback=initMap&v=weekly" defer></script>
 
   </body>
   
