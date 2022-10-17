@@ -53,3 +53,38 @@ $(document).ready(function() {
 }
 
 window.initMap = initMap;
+
+(function() {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init('E0XiyjL4FZETdLjk0');
+})();
+
+window.onload = function() {
+    var notification = document.getElementById('notification');
+    notification.style.display = "none";
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm('service_j3u9sjf', 'template_8k5qsod', this)
+            .then(function() {
+                notification.style.display = "block";
+            }, function(error) {
+                notification.style.display = "block";
+            });
+    });
+
+    document.getElementById('delete-notification').addEventListener('click', function(event) {
+        event.preventDefault();
+        notification.style.display = "none";        
+    });
+    
+}
+
+const onloadCallback = function() {
+    console.log("reCAPTCHA has loaded!");
+    grecaptcha.reset();
+};
+

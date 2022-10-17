@@ -9,38 +9,10 @@
     <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>    
     <script src="static/js/main.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('E0XiyjL4FZETdLjk0');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('service_j3u9sjf', 'template_8k5qsod', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-    <script>
-        const onloadCallback = function() {
-          console.log("reCAPTCHA has loaded!");
-          grecaptcha.reset();
-        };
-    </script>
-    <script async src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>
+    <script async src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>    
   </head>
   <body>
     <nav class="navbar is-fixed-top is-white" role="navigation" aria-label="main navigation">
@@ -150,18 +122,47 @@
             </div>
         </div>
         <div class="columns">
-            <div class="column is-three-fifths">                
+            <div class="column is-half">                
                 <form id="contact-form">
                     <input type="hidden" name="contact_number">
-                    <label>Name</label>
-                    <input type="text" name="from_name">
-                    <label>Email</label>
-                    <input type="email" name="reply_to">
-                    <label>Message</label>
-                    <textarea name="message"></textarea>
-                    <div class="g-recaptcha" data-sitekey="6LeCAl8iAAAAACXvZmXuyQ7md47Ang7jWRxjhSev"></div>
-                    <input type="submit" value="Send">
+                    <div class="field">
+                        <label class="label">Nome</label>
+                        <p class="control has-icons-left">                            
+                            <input class="input" type="text" name="from_name" placeholder="Seu Nome">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-font"></i>
+                            </span>                            
+                        </p>                        
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <p class="control has-icons-left">                            
+                            <input class="input" type="email" name="reply_to" placeholder="ex.: joao@gmail.com">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>                            
+                        </p>                        
+                    </div>
+                    <div class="field">
+                        <label class="label">Mensagem</label>
+                        <p class="control has-icons-left">
+                            <textarea class="textarea" placeholder="Sua Mensagem" name="message"></textarea>                                                                                  
+                        </p>                        
+                    </div>
+                    <div class="field">
+                        <div class="g-recaptcha" data-sitekey="6LeCAl8iAAAAACXvZmXuyQ7md47Ang7jWRxjhSev"></div>
+                    </div>                                   
+                    <div class="control">
+                        <button class="button is-primary" type="submit" id="enviar">Enviar</button>
+                    </div>                    
                 </form>
+                <p></p>
+                <p>
+                    <div class="notification" id="notification">
+                        <button class="delete" id="delete-notification"></button>
+                        Lorem ipsum
+                    </div>
+                </p>                
             </div>
             <div class="column">
                 <div id="map"></div>
