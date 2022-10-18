@@ -61,19 +61,57 @@ window.initMap = initMap;
 
 window.onload = function() {
     var notification = document.getElementById('notification');
-    notification.style.display = "none";
+    var notification_message = document.getElementById('notification-message');
+    notification.style.display = "none";        
 
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
-        // generate a five digit number for the contact_number variable
-        this.contact_number.value = Math.random() * 100000 | 0;
-        // these IDs from the previous steps
-        emailjs.sendForm('service_j3u9sjf', 'template_8k5qsod', this)
-            .then(function() {
-                notification.style.display = "block";
-            }, function(error) {
-                notification.style.display = "block";
-            });
+
+        var name = document.getElementsByName('from_name')[0];
+        var email = document.getElementsByName('reply_to')[0];
+        var text_message = document.getElementsByName('message')[0];
+        var error = false;
+        var message = '';
+    
+        if (!text_message.value) {
+            message = 'Mensagem deve ser informada.'
+            error = true;
+        }
+
+        if (!email.value) {
+            message = 'Email deve ser informado.'
+            error = true;
+        }
+
+        if (!name.value) {
+            message = 'Nome deve ser informado.'
+            error = true;
+        }
+
+        if (!error) {
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('service_j3u9sjf', 'template_8k5qsod', this)
+                .then(function() {     
+                    message = 'Enviado com Sucesso!';
+                    notification.className = 'notification is-success';
+                    notification_message.textContent = message;
+                    notification.style.display = "block";
+                }, function(error) {                                        
+                    if (!message) {
+                        message = 'Não foi possível enviar. Revise os campos.';
+                    }                                
+                    notification.className = 'notification is-danger';
+                    notification_message.textContent = message;
+                    notification.style.display = "block";
+                });
+        } else {
+            notification.className = 'notification is-danger';
+            notification_message.textContent = message;
+            notification.style.display = "block";
+        }
+        
     });
 
     document.getElementById('delete-notification').addEventListener('click', function(event) {
