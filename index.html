@@ -123,39 +123,41 @@
         </div>
         <div class="columns">
             <div class="column is-half">                
-                <form id="contact-form">
-                    <input type="hidden" name="contact_number">
-                    <div class="field">
-                        <label class="label">Nome</label>
-                        <p class="control has-icons-left">                            
-                            <input class="input" type="text" name="from_name" placeholder="Seu Nome">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-font"></i>
-                            </span>                            
-                        </p>                        
-                    </div>
-                    <div class="field">
-                        <label class="label">Email</label>
-                        <p class="control has-icons-left">                            
-                            <input class="input" type="email" name="reply_to" placeholder="ex.: joao@gmail.com">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
-                            </span>                            
-                        </p>                        
-                    </div>
-                    <div class="field">
-                        <label class="label">Mensagem</label>
-                        <p class="control has-icons-left">
-                            <textarea class="textarea" placeholder="Sua Mensagem" name="message"></textarea>                                                                                  
-                        </p>                        
-                    </div>
-                    <div class="field">
-                        <div class="g-recaptcha" data-sitekey="6LeCAl8iAAAAACXvZmXuyQ7md47Ang7jWRxjhSev"></div>
-                    </div>                                   
-                    <div class="control">
-                        <button class="button is-primary" type="submit" id="enviar">Enviar</button>
-                    </div>                    
-                </form>              
+                <div class="box">
+                    <form id="contact-form">
+                        <input type="hidden" name="contact_number">
+                        <div class="field">
+                            <label class="label">Nome</label>
+                            <p class="control has-icons-left">                            
+                                <input class="input" type="text" name="from_name" placeholder="Seu Nome">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-font"></i>
+                                </span>                            
+                            </p>                        
+                        </div>
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <p class="control has-icons-left">                            
+                                <input class="input" type="email" name="reply_to" placeholder="ex.: joao@gmail.com">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>                            
+                            </p>                        
+                        </div>
+                        <div class="field">
+                            <label class="label">Mensagem</label>
+                            <p class="control has-icons-left">
+                                <textarea class="textarea" placeholder="Sua Mensagem" name="message"></textarea>                                                                                  
+                            </p>                        
+                        </div>
+                        <div class="field">
+                            <div class="g-recaptcha" data-sitekey="6LeCAl8iAAAAACXvZmXuyQ7md47Ang7jWRxjhSev"></div>
+                        </div>                                   
+                        <div class="control">
+                            <button class="button is-primary" type="submit" id="enviar">Enviar</button>
+                        </div>                    
+                    </form>  
+                </div>                            
             </div>
             <div class="column">
                 <div id="map"></div>

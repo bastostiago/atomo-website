@@ -47,8 +47,8 @@ $(document).ready(function() {
     });
     // The marker, positioned at Uluru
     const marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
+        position: uluru,
+        map: map,
     });
 }
 
