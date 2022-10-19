@@ -39,3 +39,7 @@ html {
     transform:scale(0.77);
     transform-origin:0 0;
 }
+
+.logo-slider img:hover {
+    transform: scale(1.1);
+}

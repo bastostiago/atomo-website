@@ -52,6 +52,12 @@ $(document).ready(function() {
             }
         });
     };
+
+    //Slider Logo
+    $('.logo-slider').slick({
+        dots: true
+    });
+
   });
 
   // Initialize and add the map
