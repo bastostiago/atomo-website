@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    scroll-padding: 50px;
 }
 
 #logo:hover {
@@ -11,4 +12,17 @@ html {
     /* The height is 400 pixels */
     width: 100%;
     /* The width is the width of the web page */
-  }
+}
+
+.navbar {
+    box-shadow: 0 1px 40px rgb(0 0 0 / 0.1);
+}
+
+.back-image {
+    position: fixed;
+    z-index: -999;
+    opacity: 10%;
+    margin-left: -200px;
+    margin-top: -200px;
+
+}

@@ -9,6 +9,24 @@ $(document).ready(function() {
   
     });
 
+    $(".navbar-item").click(function() {
+        
+        if ($(".navbar-burger").hasClass("is-active")) {
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+        }        
+  
+    });
+
+    $("section").click(function() {
+        
+        if ($(".navbar-burger").hasClass("is-active")) {
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+        }        
+  
+    });
+
     // Animation image on welcome
     $("#mainImage").fadeIn(1000);
 

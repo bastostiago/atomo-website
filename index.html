@@ -14,11 +14,12 @@
     <script src="static/js/main.js"></script>
     <script async src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>    
   </head>
-  <body>
+  <body>    
+    <img class="back-image" src="static/img/background.png" width="80%">    
     <nav class="navbar is-fixed-top is-white" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="#welcome" id="logo">
-                <img src="static/img/Atomo-Horizontal.jpg" width="200%">
+                <img src="static/img/Atomo-Horizontal.jpg">
             </a>
         
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
@@ -34,12 +35,12 @@
                     Home
                 </a>
             
-                <a class="navbar-item" href="#whoweare">
-                    Quem Somos
-                </a>
-
                 <a class="navbar-item" href="#solutions">
                     Soluções
+                </a>
+
+                <a class="navbar-item" href="#our-customers">
+                    Nossos Clientes
                 </a>
 
                 <a class="navbar-item" href="#contact">
@@ -55,17 +56,26 @@
                 <h1 class="title">
                     Bem vindo a Átomo
                 </h1>
+                <p></p>
                 <p class="subtitle">
-                    Especialista em transformar <strong>Dados</strong> em informações que guiam sua <strong>Organização</strong>. A Ciência de Dados é capaz de potencializar seus resultados, diminuir seus custos e criar vantagem competitiva. 
+                    Especialista em transformar <strong>Dados</strong> em informações primordiais para a <strong>tomada de decisão</strong>. 
                 </p>
-                <div class="buttons">
-                    <button class="button is-info is-rounded" onclick="location.href='https://wa.me/55047988135445';">
-                        <span class="icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </span>
-                        <span>Fale com um Especialista</span>
-                    </button>         
-                </div>
+                <article class="tile notification is-info is-child">
+                    <p class="block">
+                        A Ciência de Dados é capaz de potencializar seus resultados, diminuir seus custos e criar vantagem competitiva.
+                    </p>
+                    <p class="block">
+                        Nosso time conta com profissionais comprometidos e com intimidade em softwares de gestão, bancos de dados, plataformas em nuvem e desenvolvimento de software.
+                    </p>
+                    <div class="buttons">
+                        <button class="button is-rounded" onclick="location.href='https://wa.me/55047988135445';">
+                            <span class="icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </span>
+                            <span>Fale com um Especialista</span>
+                        </button>         
+                    </div>
+                </article>
             </div>
             <div class="column">
                 <figure class="image is-fullwidth">
@@ -75,101 +85,101 @@
           </div>
     </section>
 
-    <section class="section" id="whoweare">
-        <div class="columns is-full has-text-centered">
-            <div class="column">
-                <h1 class="title has-background-info-dark has-text-white p-3">
-                    Quem Somos?
-                </h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dictum tortor, eu gravida velit. Nulla facilisi. Aliquam quis viverra nisl. Fusce gravida nec dolor non iaculis. Nunc at lobortis tortor. Donec auctor velit risus, vitae commodo ex vestibulum a. Fusce sed dui vitae libero ornare convallis eu quis leo. Integer consectetur magna dolor, eget egestas ex condimentum ac. Quisque consectetur imperdiet odio, non consectetur est lobortis vitae. Curabitur vel malesuada ex.
-
-                    Pellentesque id consequat diam. Suspendisse enim orci, pharetra blandit nulla ac, ullamcorper pharetra enim. Sed dignissim ex eget lectus porttitor mollis. Mauris aliquet mattis mollis. Sed maximus massa felis, ut pellentesque metus facilisis non. Quisque massa ipsum, tempor et dolor eget, mattis congue purus. Proin vel nunc ut lectus sagittis gravida.
-                    
-                    Aenean sollicitudin a sem quis molestie. Phasellus tempor tellus vitae ornare cursus. Aliquam sit amet nisl ipsum. Suspendisse et ex sit amet nisi posuere consequat. Vivamus sed lectus vitae nisi sollicitudin euismod vel ut eros. Suspendisse pulvinar ullamcorper lacus vel convallis. In hac habitasse platea dictumst.
-                    
-                    Nullam maximus nec lorem a dignissim. Sed eget ex luctus tellus rutrum finibus. Aliquam sed tortor sed purus ultricies commodo sed et massa. Aliquam tempus neque sed orci bibendum ultricies. Fusce imperdiet neque ac convallis aliquam. Donec commodo euismod turpis, non euismod velit porta et. Ut fringilla metus leo, non cursus arcu pharetra pellentesque. Nullam pretium, dolor a pharetra mollis, ligula odio finibus sem, quis scelerisque orci ligula sed ipsum. Proin congue justo eu lectus accumsan, eget feugiat dui iaculis. Nullam id lectus interdum, efficitur metus at, efficitur ex.
-                    
-                    Integer turpis risus, tincidunt egestas ultricies ullamcorper, dictum ac lorem. Donec at enim odio. Quisque bibendum vestibulum risus eu pharetra. Donec et commodo nulla, in tempus metus. Vivamus dolor dui, rutrum et sapien nec, facilisis consequat sapien. Fusce luctus orci non sapien cursus volutpat. Aenean faucibus nulla commodo eros maximus, efficitur dignissim diam faucibus. Sed et felis sit amet eros sagittis dignissim. Praesent tristique augue vel velit posuere, vitae eleifend purus efficitur. Donec lorem sapien, vehicula ut mauris a, accumsan iaculis quam.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="solutions">
-        <div class="columns is-full has-text-centered">
-            <div class="column">
-                <h1 class="title has-background-info-dark has-text-white p-3">
+    <section class="hero is-small is-info is-full" id="solutions">
+        <div class="hero-body">            
+                <h1 class="title has-text-centered">
                     Soluções
-                </h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dictum tortor, eu gravida velit. Nulla facilisi. Aliquam quis viverra nisl. Fusce gravida nec dolor non iaculis. Nunc at lobortis tortor. Donec auctor velit risus, vitae commodo ex vestibulum a. Fusce sed dui vitae libero ornare convallis eu quis leo. Integer consectetur magna dolor, eget egestas ex condimentum ac. Quisque consectetur imperdiet odio, non consectetur est lobortis vitae. Curabitur vel malesuada ex.
+                </h1>            
+            </div>        
+        </div>                
+    </section>
+    <section class="section">        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dictum tortor, eu gravida velit. Nulla facilisi. Aliquam quis viverra nisl. Fusce gravida nec dolor non iaculis. Nunc at lobortis tortor. Donec auctor velit risus, vitae commodo ex vestibulum a. Fusce sed dui vitae libero ornare convallis eu quis leo. Integer consectetur magna dolor, eget egestas ex condimentum ac. Quisque consectetur imperdiet odio, non consectetur est lobortis vitae. Curabitur vel malesuada ex.
 
-                    Pellentesque id consequat diam. Suspendisse enim orci, pharetra blandit nulla ac, ullamcorper pharetra enim. Sed dignissim ex eget lectus porttitor mollis. Mauris aliquet mattis mollis. Sed maximus massa felis, ut pellentesque metus facilisis non. Quisque massa ipsum, tempor et dolor eget, mattis congue purus. Proin vel nunc ut lectus sagittis gravida.
-                    
-                    Aenean sollicitudin a sem quis molestie. Phasellus tempor tellus vitae ornare cursus. Aliquam sit amet nisl ipsum. Suspendisse et ex sit amet nisi posuere consequat. Vivamus sed lectus vitae nisi sollicitudin euismod vel ut eros. Suspendisse pulvinar ullamcorper lacus vel convallis. In hac habitasse platea dictumst.
-                    
-                    Nullam maximus nec lorem a dignissim. Sed eget ex luctus tellus rutrum finibus. Aliquam sed tortor sed purus ultricies commodo sed et massa. Aliquam tempus neque sed orci bibendum ultricies. Fusce imperdiet neque ac convallis aliquam. Donec commodo euismod turpis, non euismod velit porta et. Ut fringilla metus leo, non cursus arcu pharetra pellentesque. Nullam pretium, dolor a pharetra mollis, ligula odio finibus sem, quis scelerisque orci ligula sed ipsum. Proin congue justo eu lectus accumsan, eget feugiat dui iaculis. Nullam id lectus interdum, efficitur metus at, efficitur ex.
-                    
-                    Integer turpis risus, tincidunt egestas ultricies ullamcorper, dictum ac lorem. Donec at enim odio. Quisque bibendum vestibulum risus eu pharetra. Donec et commodo nulla, in tempus metus. Vivamus dolor dui, rutrum et sapien nec, facilisis consequat sapien. Fusce luctus orci non sapien cursus volutpat. Aenean faucibus nulla commodo eros maximus, efficitur dignissim diam faucibus. Sed et felis sit amet eros sagittis dignissim. Praesent tristique augue vel velit posuere, vitae eleifend purus efficitur. Donec lorem sapien, vehicula ut mauris a, accumsan iaculis quam.</p>
-            </div>
-        </div>
+            Pellentesque id consequat diam. Suspendisse enim orci, pharetra blandit nulla ac, ullamcorper pharetra enim. Sed dignissim ex eget lectus porttitor mollis. Mauris aliquet mattis mollis. Sed maximus massa felis, ut pellentesque metus facilisis non. Quisque massa ipsum, tempor et dolor eget, mattis congue purus. Proin vel nunc ut lectus sagittis gravida.
+            
+            Aenean sollicitudin a sem quis molestie. Phasellus tempor tellus vitae ornare cursus. Aliquam sit amet nisl ipsum. Suspendisse et ex sit amet nisi posuere consequat. Vivamus sed lectus vitae nisi sollicitudin euismod vel ut eros. Suspendisse pulvinar ullamcorper lacus vel convallis. In hac habitasse platea dictumst.
+            
+            Nullam maximus nec lorem a dignissim. Sed eget ex luctus tellus rutrum finibus. Aliquam sed tortor sed purus ultricies commodo sed et massa. Aliquam tempus neque sed orci bibendum ultricies. Fusce imperdiet neque ac convallis aliquam. Donec commodo euismod turpis, non euismod velit porta et. Ut fringilla metus leo, non cursus arcu pharetra pellentesque. Nullam pretium, dolor a pharetra mollis, ligula odio finibus sem, quis scelerisque orci ligula sed ipsum. Proin congue justo eu lectus accumsan, eget feugiat dui iaculis. Nullam id lectus interdum, efficitur metus at, efficitur ex.
+            
+            Integer turpis risus, tincidunt egestas ultricies ullamcorper, dictum ac lorem. Donec at enim odio. Quisque bibendum vestibulum risus eu pharetra. Donec et commodo nulla, in tempus metus. Vivamus dolor dui, rutrum et sapien nec, facilisis consequat sapien. Fusce luctus orci non sapien cursus volutpat. Aenean faucibus nulla commodo eros maximus, efficitur dignissim diam faucibus. Sed et felis sit amet eros sagittis dignissim. Praesent tristique augue vel velit posuere, vitae eleifend purus efficitur. Donec lorem sapien, vehicula ut mauris a, accumsan iaculis quam.</p>        
     </section>
 
-    <section class="section" id="contact">        
-        <div class="columns has-text-centered">
-            <div class="column is-full">
-                <h1 class="title has-background-info-dark has-text-white p-3">
-                    Contato
-                </h1>
+    <section class="hero is-small is-info is-full" id="our-customers">
+        <div class="hero-body">            
+                <h1 class="title has-text-centered">
+                    Nossos Clientes
+                </h1>            
+            </div>        
+        </div>                
+    </section>
+    <section class="section">        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dictum tortor, eu gravida velit. Nulla facilisi. Aliquam quis viverra nisl. Fusce gravida nec dolor non iaculis. Nunc at lobortis tortor. Donec auctor velit risus, vitae commodo ex vestibulum a. Fusce sed dui vitae libero ornare convallis eu quis leo. Integer consectetur magna dolor, eget egestas ex condimentum ac. Quisque consectetur imperdiet odio, non consectetur est lobortis vitae. Curabitur vel malesuada ex.
+
+            Pellentesque id consequat diam. Suspendisse enim orci, pharetra blandit nulla ac, ullamcorper pharetra enim. Sed dignissim ex eget lectus porttitor mollis. Mauris aliquet mattis mollis. Sed maximus massa felis, ut pellentesque metus facilisis non. Quisque massa ipsum, tempor et dolor eget, mattis congue purus. Proin vel nunc ut lectus sagittis gravida.
+            
+            Aenean sollicitudin a sem quis molestie. Phasellus tempor tellus vitae ornare cursus. Aliquam sit amet nisl ipsum. Suspendisse et ex sit amet nisi posuere consequat. Vivamus sed lectus vitae nisi sollicitudin euismod vel ut eros. Suspendisse pulvinar ullamcorper lacus vel convallis. In hac habitasse platea dictumst.
+            
+            Nullam maximus nec lorem a dignissim. Sed eget ex luctus tellus rutrum finibus. Aliquam sed tortor sed purus ultricies commodo sed et massa. Aliquam tempus neque sed orci bibendum ultricies. Fusce imperdiet neque ac convallis aliquam. Donec commodo euismod turpis, non euismod velit porta et. Ut fringilla metus leo, non cursus arcu pharetra pellentesque. Nullam pretium, dolor a pharetra mollis, ligula odio finibus sem, quis scelerisque orci ligula sed ipsum. Proin congue justo eu lectus accumsan, eget feugiat dui iaculis. Nullam id lectus interdum, efficitur metus at, efficitur ex.
+            
+            Integer turpis risus, tincidunt egestas ultricies ullamcorper, dictum ac lorem. Donec at enim odio. Quisque bibendum vestibulum risus eu pharetra. Donec et commodo nulla, in tempus metus. Vivamus dolor dui, rutrum et sapien nec, facilisis consequat sapien. Fusce luctus orci non sapien cursus volutpat. Aenean faucibus nulla commodo eros maximus, efficitur dignissim diam faucibus. Sed et felis sit amet eros sagittis dignissim. Praesent tristique augue vel velit posuere, vitae eleifend purus efficitur. Donec lorem sapien, vehicula ut mauris a, accumsan iaculis quam.</p>        
+    </section>
+
+    <section class="hero is-small is-info is-full" id="contact">        
+        <div class="hero-body">
+            <h1 class="title has-text-centered">
+                Contato
+            </h1>
+            <div class="columns p-5">
+                <div class="column is-half">                
+                    <div class="box">
+                        <div class="block">
+                            <form id="contact-form">
+                                <input type="hidden" name="contact_number">
+                                <div class="field">
+                                    <label class="label">Nome</label>
+                                    <p class="control has-icons-left">                            
+                                        <input class="input" type="text" name="from_name" placeholder="Seu Nome">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-font"></i>
+                                        </span>                            
+                                    </p>                        
+                                </div>
+                                <div class="field">
+                                    <label class="label">Email</label>
+                                    <p class="control has-icons-left">                            
+                                        <input class="input" type="email" name="reply_to" placeholder="ex.: joao@gmail.com">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>                            
+                                    </p>                        
+                                </div>
+                                <div class="field">
+                                    <label class="label">Mensagem</label>
+                                    <p class="control has-icons-left">
+                                        <textarea class="textarea" placeholder="Sua Mensagem" name="message"></textarea>                                                                                  
+                                    </p>                        
+                                </div>
+                                <div class="field">
+                                    <div class="g-recaptcha" data-sitekey="6LeCAl8iAAAAACXvZmXuyQ7md47Ang7jWRxjhSev"></div>
+                                </div>                                   
+                                <div class="control">
+                                    <button class="button is-primary" type="submit" id="enviar">Enviar</button>
+                                </div>                    
+                            </form> 
+                        </div>                     
+                        <div class="block notification" id="notification">
+                            <button class="delete" id="delete-notification"></button>
+                            <p id="notification-message"></p>
+                        </div>
+                                          
+                    </div>                            
+                </div>
+                <div class="column">
+                    <div id="map"></div>
+                </div>
             </div>
-        </div>
-        <div class="columns">
-            <div class="column is-half">                
-                <div class="box">
-                    <div class="block">
-                        <form id="contact-form">
-                            <input type="hidden" name="contact_number">
-                            <div class="field">
-                                <label class="label">Nome</label>
-                                <p class="control has-icons-left">                            
-                                    <input class="input" type="text" name="from_name" placeholder="Seu Nome">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-font"></i>
-                                    </span>                            
-                                </p>                        
-                            </div>
-                            <div class="field">
-                                <label class="label">Email</label>
-                                <p class="control has-icons-left">                            
-                                    <input class="input" type="email" name="reply_to" placeholder="ex.: joao@gmail.com">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-envelope"></i>
-                                    </span>                            
-                                </p>                        
-                            </div>
-                            <div class="field">
-                                <label class="label">Mensagem</label>
-                                <p class="control has-icons-left">
-                                    <textarea class="textarea" placeholder="Sua Mensagem" name="message"></textarea>                                                                                  
-                                </p>                        
-                            </div>
-                            <div class="field">
-                                <div class="g-recaptcha" data-sitekey="6LeCAl8iAAAAACXvZmXuyQ7md47Ang7jWRxjhSev"></div>
-                            </div>                                   
-                            <div class="control">
-                                <button class="button is-primary" type="submit" id="enviar">Enviar</button>
-                            </div>                    
-                        </form> 
-                    </div>                     
-                    <div class="block notification" id="notification">
-                        <button class="delete" id="delete-notification"></button>
-                        <p id="notification-message"></p>
-                    </div>
-                                      
-                </div>                            
-            </div>
-            <div class="column">
-                <div id="map"></div>
-            </div>
-        </div>
+        </div>        
     </section>
 
     <footer class="footer">
