@@ -26,3 +26,11 @@ html {
     margin-top: -200px;
 
 }
+
+@media only screen and (max-width: 600px) {
+    .back-image {       
+        margin-left: -110px;
+        margin-top: -110px;
+    
+    }
+}
