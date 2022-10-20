@@ -42,4 +42,19 @@ html {
 
 .logo-slider img:hover {
     transform: scale(1.1);
+    transition: transform 0.35s;
+}
+
+.media+.media {
+    border-top: none;
+}
+
+.is-divider {
+    border-top: 1px solid rgba(219,219,219,.5);
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.navbar-item img {
+    max-height: 2.25rem;
 }
