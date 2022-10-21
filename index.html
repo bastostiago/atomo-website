@@ -38,10 +38,27 @@
                 <a class="navbar-item is-active" href="#welcome">
                     Home
                 </a>
-            
-                <a class="navbar-item" href="#solutions">
-                    Soluções
-                </a>
+                
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="#solutions">
+                        Soluções
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="#power-bi">
+                            Microsoft Power BI
+                        </a>
+                        <a class="navbar-item" href="#data-lake">
+                            Data Lake
+                        </a>
+                        <a class="navbar-item" href="#data-science">
+                            Ciência de Dados
+                        </a>
+                        <a class="navbar-item" href="#it-consulting">
+                            Consultoria em Tecnologia
+                        </a>
+                    </div>
+                </div>
+                
 
                 <a class="navbar-item" href="#our-customers">
                     Clientes
@@ -100,7 +117,7 @@
             </div>        
         </div>                
     </section>
-    <section class="section">        
+    <section class="section" id="power-bi">        
         <div class="columns">            
             <div class="column">
                 <h1 class="title is-3 has-text-left">
@@ -201,12 +218,14 @@
             </div>
         </div>        
     </section>
+
     <div class="is-divider is-full"></div>
-    <section class="section">
+
+    <section class="section" id="data-lake">
         <div class="columns">     
             <div class="column is-three-fifths">
                 <figure class="image">
-                    <img src="static/img/powerbi-image1.png" />
+                    <img src="static/img/datalake-image1.png" />
                 </figure>
             </div>       
             <div class="column">
@@ -303,8 +322,10 @@
             </div>            
         </div>
     </section>
+
     <div class="is-divider is-full"></div>
-    <section class="section">
+
+    <section class="section" id="data-science">
         <div class="columns">     
             <div class="column">
                 <h1 class="title is-3 has-text-left">
@@ -364,9 +385,35 @@
             </div>
             <div class="column is-three-fifths">
                 <figure class="image">
-                    <img src="static/img/powerbi-image1.png" />
+                    <img src="static/img/datascience-image1.png" />
                 </figure>
             </div>      
+        </div>
+    </section>
+
+    <div class="is-divider is-full"></div>
+
+    <section class="section" id="it-consulting">
+        <div class="columns">     
+            <div class="column is-three-fifths">
+                <figure class="image">
+                    <img src="static/img/consultoria-image1.svg" />
+                </figure>
+            </div> 
+            <div class="column">
+                <h1 class="title is-3 has-text-left">
+                    Consultoria em Tecnologia
+                </h1>  
+                <h1 class="subtitle has-text-left">
+                    Alinhe Suas Estratégias Organizacionais e Tecnológicas
+                </h1>
+                <p class="block">
+                    Com a consultoria e mentoria tecnológica da Átomo você vai melhorar a performance, escalabilidade e competitividade do seu negócio.
+                </p>
+                <p class="block">
+                    Tenha seus fluxos identificados e direcionados para as ferramentas de hardware e software corretas e usuais conforme sua real necessidade.
+                </p>            
+            </div>
         </div>
     </section>
         
@@ -379,15 +426,17 @@
             </div>        
         </div>                
     </section>
-    <section class="section">        
-        <div class="logo-slider" data-slick='{"slidesToShow": 5, "slidesToScroll": 5}'>
-            <img class="img-slider" src="https://storage.googleapis.com/tiago-default/atomo-website-logo1.png" alt="Rocha Materias de Construção"/>
-            <img class="img-slider" src="static/img/logo-customers/logo1.png" />
-            <img class="img-slider" src="static/img/logo-customers/logo1.png" />
-            <img class="img-slider" src="static/img/logo-customers/logo1.png" />
-            <img class="img-slider" src="static/img/logo-customers/logo1.png" />
+    <div class="columns is-mobile">     
+        <div class="column is-10 is-offset-1">   
+            <div class="logo-slider">
+                <img class="img-slider" src="https://storage.googleapis.com/tiago-default/atomo-website-logo1.png" alt="Rocha Materias de Construção"/>
+                <img class="img-slider" src="static/img/logo-customers/logo1.png" />
+                <img class="img-slider" src="static/img/logo-customers/logo1.png" />
+                <img class="img-slider" src="static/img/logo-customers/logo1.png" />
+                <img class="img-slider" src="static/img/logo-customers/logo1.png" />
+            </div>
         </div>
-    </section>
+    </div>
 
     <section class="hero is-small is-info is-full" id="contact">        
         <div class="hero-body">

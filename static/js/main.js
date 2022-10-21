@@ -39,15 +39,13 @@ $(document).ready(function() {
         sections.forEach((section) => {
             const sectionTop = section.offsetTop;
             if (pageYOffset >= sectionTop - 60) {
-                current = section.getAttribute("id");                 
+                current = section.getAttribute("id");
             }
         });
 
         navA.forEach((a) => {                   
             a.classList.remove("is-active");
-            // console.log(current);
-            // console.log('ClassList: ' + a.classList);
-            if (a.href.includes(current) && a.id != 'logo') {
+            if (a.hasAttribute('href') && a.href.includes(current) && a.id != 'logo') {
                 a.classList.add("is-active");
             }
         });
@@ -55,7 +53,12 @@ $(document).ready(function() {
 
     //Slider Logo
     $('.logo-slider').slick({
-        dots: true
+        //dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        autoplaySpeed: 2000
     });
 
   });
