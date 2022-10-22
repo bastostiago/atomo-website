@@ -66,7 +66,7 @@ $(document).ready(function() {
   // Initialize and add the map
   function initMap() {
     // The location of Uluru
-    const uluru = { lat: -27.21202, lng: -49.64387};
+    const uluru = { lat: -27.19571, lng: -49.61709};
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
