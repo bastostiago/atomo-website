@@ -58,3 +58,28 @@ html {
 .navbar-item img {
     max-height: 2.25rem;
 }
+
+.whatsfloat{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+
+.whatsfloat:hover {
+    transform: scale(1.1);
+    transition: transform 0.35s;
+    box-shadow: 2px 2px 3px rgb(140, 243, 166);
+}
+
+.my-float{
+	margin-top:16px;
+}
