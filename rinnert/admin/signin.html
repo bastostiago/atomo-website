@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Atomo</title>
+</head>
+<body>    
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-auth.js"></script>
+<script>   
+    var firebaseConfig = {
+        apiKey: "AIzaSyAw5bLvdCvXr9gbspM9l-fnwXFVAaNkG8Y",
+        authDomain: "powerbi-rinnert.firebaseapp.com",
+        projectId: "powerbi-rinnert",
+        storageBucket: "powerbi-rinnert.appspot.com",
+        messagingSenderId: "501432478552",
+        appId: "1:501432478552:web:84af8c0f8f3b8d92d1132d",
+        measurementId: "G-BEB2TTKLRH"
+    };
+
+    // Initialize Firebase
+    var app = firebase.initializeApp(firebaseConfig);   
+    
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+            window.location.href = "index.html";
+        })
+        .catch((error) => {
+            // erro! Aqui você pode tratar o erro ou mostrar uma mensagem para o usuário
+        });
+
+</script>
+
+</html>
