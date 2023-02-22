@@ -98,7 +98,7 @@
             // Configura a classe do elemento
             divElement.className = "pagelink";
             // Configura o conteúdo do elemento            
-            divElement.innerHTML = '<button id="logout-btn" name="logout-btn" class="floating-btn1" onClick="window.location.href=https://www.atomo.tec.br/rinnert/vendas/admin/">Ir para Vendas</button>';
+            divElement.innerHTML = '<button id="logout-btn" name="logout-btn" class="floating-btn1" onClick="navegaPagina(1)">Ir para Vendas</button>';
             document.body.appendChild(divElement);
 
         } else {
@@ -113,6 +113,13 @@
         }).catch(function(error) {
             alert("Erro ao fazer logout: " + error.message);
         });
+    }
+
+    function navegaPagina(pg) {
+        if (pg == 1) {
+            window.location.href="https://www.atomo.tec.br/rinnert/vendas/admin/";
+        }
+
     }
 
 </script>
