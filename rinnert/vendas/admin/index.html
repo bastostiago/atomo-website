@@ -91,7 +91,13 @@
             // Configura a classe do elemento
             divElement.className = "logout";
             // Configura o conteúdo do elemento
-            divElement.innerHTML = '<button id="logout-btn" name="logout-btn" class="floating-btn" onClick="logoutAtomo()">Logout Átomo</button>';
+            divElement.innerHTML = '<button id="logout-btn" name="logout-btn" class="floating-btn" onClick="logoutAtomo()">Logout Átomo</button>';            
+            document.body.appendChild(divElement);
+
+            var divElement = document.createElement("div");
+            // Configura a classe do elemento
+            divElement.className = "pagelink";
+            // Configura o conteúdo do elemento            
             divElement.innerHTML = '<button id="logout-btn" name="logout-btn" class="floating-btn1" onClick="window.location.href=https://www.atomo.tec.br/rinnert/financeiro/admin/">Ir para Financeiro</button>';
             document.body.appendChild(divElement);
 
