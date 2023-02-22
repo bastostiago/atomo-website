@@ -7,6 +7,8 @@
     <title>Sign in Atomo</title>
 </head>
 <body>    
+    <button onclick="signInWithGoogle()">Login com o Google</button>
+
 </body>
 
 <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
@@ -23,15 +25,15 @@
     };
 
     // Initialize Firebase
-    var app = firebase.initializeApp(firebaseConfig);   
-    
+    var app = firebase.initializeApp(firebaseConfig);       
+
     var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider)
+    firebase.auth().signInWithGoogle(provider)
         .then((result) => {
             window.location.href = "index.html";
         })
         .catch((error) => {
-            // erro! Aqui você pode tratar o erro ou mostrar uma mensagem para o usuário
+            alert("Usuário não encontrado!")
         });
 
 </script>
