@@ -103,13 +103,13 @@
 
         } else {
             // usuário não autenticado, redirecione para a página de login ou exiba uma mensagem
-            window.location.href = "https://www.atomo.tec.br/rinnert/signin.html?dash=vendas";
+            window.location.href = "../../signin.html?dash=vendas";
         }
     });
 
     function logoutAtomo() {
         firebase.auth().signOut().then(function() {
-            window.location.href = "https://www.atomo.tec.br/rinnert/signin.html?dash=vendas";
+            window.location.href = "../../signin.html?dash=vendas";
         }).catch(function(error) {
             alert("Erro ao fazer logout: " + error.message);
         });
@@ -117,7 +117,7 @@
 
     function navegaPagina(pg) {
         if (pg == 1) {
-            window.location.href="https://www.atomo.tec.br/rinnert/financeiro/admin/";
+            window.location.href="../../financeiro/admin/";
         }
 
     }
