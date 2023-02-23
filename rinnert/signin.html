@@ -68,8 +68,18 @@
     // Autentica o usuário com as credenciais de login
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then(function() {
-            // Login com sucesso, redireciona para a nova página
+          const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+          });
+          // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+          let dash = params.dash;          
+          // Login com sucesso, redireciona para a nova página
+          if (dash) {
+            window.location.href = "https://www.atomo.tec.br/rinnert/" + dash + "/admin/";
+          } else {
             window.location.href = "https://www.atomo.tec.br/rinnert/vendas/admin/";
+          }
+          
         })
         .catch(function(error) {
             // Ocorreu um erro no login, exibe uma mensagem de erro
