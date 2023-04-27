@@ -81,8 +81,19 @@
             </div>
         </div>
     </nav>
-    
-    <section class="section is-medium" id="welcome">
+
+    <div class="columns">
+        <div class="column">
+            <div class="notification is-success is-light my-notification">                    
+                <span class="icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </span>
+                <span>NOVIDADE! Já conhece nosso Dashboard para Recursos Humanos? Faça um teste clicando <strong><a class="js-modal-trigger" data-target="rh-dash">AQUI!</a></strong></span>                
+            </div>                    
+        </div>        
+    </div>   
+
+    <section class="section is-medium" id="welcome">      
         <div class="columns">
             <div class="column is-half">
                 <h1 class="title is-2">
@@ -95,29 +106,31 @@
                 <p class="subtitle">
                     Somos sua porta de entrada para a <strong>GESTÃO 4.0</strong>. 
                 </p>
-                <article class="tile notification is-info is-child">
-                    <p class="block">
-                        A Ciência de Dados é capaz de potencializar seus resultados, diminuir seus custos e criar vantagem competitiva.
-                    </p>
-                    <p class="block">
-                        Nosso time conta com profissionais comprometidos e com intimidade em softwares de gestão, bancos de dados, plataformas em nuvem e desenvolvimento de software.
-                    </p>
-                    <div class="buttons">
-                        <button class="button is-rounded" onclick="location.href='https://wa.me/55047988135445';">
-                            <span class="icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </span>
-                            <span>Fale com um Especialista</span>
-                        </button>         
-                    </div>
-                </article>
+                <div class="block">
+                    <article class="tile notification is-info is-child">
+                        <p class="block">
+                            A Ciência de Dados é capaz de potencializar seus resultados, diminuir seus custos e criar vantagem competitiva.
+                        </p>
+                        <p class="block">
+                            Nosso time conta com profissionais comprometidos e com intimidade em softwares de gestão, bancos de dados, plataformas em nuvem e desenvolvimento de software.
+                        </p>
+                        <div class="buttons">
+                            <button class="button is-rounded" onclick="location.href='https://wa.me/55047988135445';">
+                                <span class="icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </span>
+                                <span>Fale com um Especialista</span>
+                            </button>         
+                        </div>
+                    </article>
+                </div>    
             </div>
             <div class="column">
                 <figure class="image is-fullwidth">
                     <img style="display: none;" src="static/img/main-image.png" id="mainImage">
                 </figure>
             </div>
-          </div>
+        </div>
     </section>
 
     <section class="hero is-small is-info is-full" id="solutions">
@@ -517,6 +530,41 @@
             </div>
         </div>        
     </section>
+
+    <div class="modal" id="rh-dash">
+        <div class="modal-background"></div>
+        <div class="modal-card" style="width: 1080px;">
+            <header class="modal-card-head" >
+            <p class="modal-card-title">Átomo Dashboards</p>
+            <button class="button is-success" style="margin-right: .5em" onclick="location.href='./rh-dash.html'">Acessar Teste Online</button>
+            <button class="button" style="margin-right: .5em" onclick="location.href='https://wa.me/55047988135445';">
+                <span class="icon">
+                    <i class="fab fa-whatsapp"></i>
+                </span>
+                <span>Fale Conosco</span>
+            </button>            
+            </header>
+            <section class="modal-card-body">
+                <div class="content">
+                    <h1 class="title">RH Dashboard</h1>
+                    <p>
+                        Descubra novas formas de potencializar seu capital humano com o nosso dashboard de Recursos Humanos.
+                    </p>
+                    <p>Ele foi construído com base nos dados da plataforma da Senior Sistemas, mas pode ser adaptado para a realidade do seu sistema.</p> 
+                    <p>Tenha insights valiosos que irão ajudá-lo a tomar decisões estratégicas mais informadas.</p>
+                    <figure class="image is-half">
+                        <img src="static/img/rh_dash.png">
+                    </figure>                    
+                    <p>Visualize informações importantes como <strong>classificações de funcionários, folha de pagamento com simulador, indicadores de rotatividade, dados de recisões, reajustes, jornadas e muito mais</strong>. Tudo de maneira clara e objetiva.</p>
+                    <p>Com o nosso dashboard, você poderá gerenciar o capital humano da sua empresa com mais eficiência e alcançar resultados surpreendentes.</p>
+                    <p>Experimente agora e comece a transformar seu negócio!</p>
+                </div>                
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button">Fechar</button>
+            </footer>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="content has-text-centered">

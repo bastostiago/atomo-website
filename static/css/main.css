@@ -80,6 +80,27 @@ html {
     box-shadow: 2px 2px 3px rgb(140, 243, 166);
 }
 
+.whatsfloatdash{
+	position:fixed;	
+	bottom:40px;
+	right:40px;	
+    z-index:100;
+}
+
+.whatsfloatdash:hover {
+    transform: scale(1.1);
+    transition: transform 0.35s;
+    box-shadow: 2px 2px 3px rgb(140, 243, 166);
+}
+
 .my-float{
 	margin-top:16px;
+}
+
+.my-notification {
+    text-align: center;
+}
+
+.modal-background {
+    background-color: #485fc759;
 }
