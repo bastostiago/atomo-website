@@ -104,3 +104,14 @@ html {
 .modal-background {
     background-color: #485fc759;
 }
+
+.modal-dash {
+    width: calc(100vw * 0.7);
+}
+
+@media all and (min-width:0px) and (max-width: 900px) {
+    .modal-dash {
+        width: calc(100vw * 0.9);
+    }
+  }
+
