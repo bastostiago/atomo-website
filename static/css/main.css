@@ -115,3 +115,9 @@ html {
     }
   }
 
+  .slick-prev:before {
+    color: #3e8ed0;
+  }
+  .slick-next:before {
+    color: #3e8ed0;
+  }

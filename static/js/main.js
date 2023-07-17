@@ -57,8 +57,9 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        arrows: false,
-        autoplaySpeed: 2000
+        arrows: true,
+        autoplaySpeed: 2000,
+        rows: 2
     });
 
   });
