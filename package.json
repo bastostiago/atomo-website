@@ -1,0 +1,17 @@
+{
+  "name": "atomo-web-site",
+  "version": "1.0.0",
+  "description": "Atomo Website",
+  "main": "static/sass/mystyles.scss",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url static/sass/mystyles.scss static/css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bulma": "^0.9.4",
+    "node-sass": "^9.0.0"
+  }
+}
