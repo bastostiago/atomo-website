@@ -10,6 +10,23 @@
 
         gtag('config', 'G-H91TH5BPM1');
     </script>
+    <!-- Event snippet for Chamada de Whatsapp conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+            window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-11264390458/hmO2CPD4gswYELrqo_sp',
+            'event_callback': callback
+        });
+        return false;
+        }
+    </script>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="https://www.atomo.tec.br/static/img/Atomo-Horizontal.jpg" />
@@ -114,7 +131,7 @@
                     Oferecemos soluções personalizadas e inovadoras para o seu negócio. Nosso principal objetivo é prover insights valiosos para auxiliar a tomada de decisão estratégica dentro das empresas.
                 </p>
                 <p class="subtitle">
-                    Combinando o poder do Business Intelligence e da Ciência de Dados, desenvolvemos dashboards sob medida, fornecendo análises detalhadas e visualizações intuitivas dos dados de sua empresa.
+                    Combinando o poder do Business Intelligence e da Ciência de Dados, entregamos uma plataforma Data Driven completa, fornecendo análises detalhadas e visualizações intuitivas dos dados de sua empresa.
                 </p>
                 <div class="block">
                     <article class="tile notification is-info is-child">
@@ -125,7 +142,7 @@
                             Nossa equipe de especialistas em análise de dados e ciência da computação está pronta para ajudar sua indústria a identificar padrões, tendências e oportunidades ocultas, impulsionando o crescimento e a eficiência de seu negócio.
                         </p>
                         <div class="buttons">
-                            <button class="button is-rounded" onclick="location.href='https://wa.me/55047988135445';">
+                            <button class="button is-rounded" onclick="return gtag_report_conversion('https://wa.me/55047988135445');">
                                 <span class="icon">
                                     <i class="fab fa-whatsapp"></i>
                                 </span>
@@ -595,7 +612,7 @@
                                     'https://atomodash.app',
                                     '_blank'
                                   );">Acessar Teste Online</button>
-                                <button class="button is-rounded" style="margin-right: .5em; margin-bottom: .5em; width: 200px;" onclick="location.href='https://wa.me/55047988135445';">
+                                <button class="button is-rounded" style="margin-right: .5em; margin-bottom: .5em; width: 200px;" onclick="return gtag_report_conversion('https://wa.me/55047988135445');">
                                     <span class="icon">
                                         <i class="fab fa-whatsapp"></i>
                                     </span>
@@ -630,7 +647,7 @@
         </div>
     </footer>
 
-    <a href="https://api.whatsapp.com/send?phone=55047988135445&text=Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." class="whatsfloat" target="_blank">
+    <a  onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=55047988135445&text=Gostaria%20de%20saber%20mais%20sobre%20os%20serviços.');" class="whatsfloat" target="_blank">
         <i class="fab fa-whatsapp my-float"></i>
     </a>
 
