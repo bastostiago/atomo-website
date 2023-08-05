@@ -57,7 +57,7 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        arrows: true,
+        arrows: false,
         autoplaySpeed: 2000,
         rows: 2
     });
