@@ -64,23 +64,33 @@ $(document).ready(function() {
 
   });
 
-  // Initialize and add the map
-  function initMap() {
-    // The location of Uluru
-    const uluru = { lat: -27.19571, lng: -49.61709};
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: uluru,
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
-    });
+    // Initialize and add the map
+let map;
+
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: -27.195612891521094, lng: -49.61705921684535 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 16,
+    center: position,
+    mapId: "ATOMO",
+  });
+
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerView({
+    map: map,
+    position: position,
+    title: "Átomo",
+  });
 }
 
-window.initMap = initMap;
+initMap();
 
 (function() {
     // https://dashboard.emailjs.com/admin/account
